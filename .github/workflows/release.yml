@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: gradle/actions/wrapper-validation@v4
+
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 21.0.4
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+
+      - name: Setup mock google-services.json
+        run: |
+          cd anylytics-demo
+          mv mock-google-services.json google-services.json
+
+      - name: Build demo project
+        run: ./gradlew :anylytics-demo:assembleDebug
+
+      - name: Extract release notes
+        id: release_notes
+        uses: ffurrer2/extract-release-notes@v2
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: ${{ steps.release_notes.outputs.release_notes }}
+          token: ${{ secrets.RELEASE_TOKEN }}
+          files: ./anylytics-demo/build/outputs/apk/debug/anylytics-demo-debug.apk

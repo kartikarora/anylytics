@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Anylytics</string>
+    <string name="title_activity_demo">DemoActivity</string>
+    <string name="switch_activity">Switch Activity</string>
+    <string name="anylytics_demo">Anylytics Demo</string>
+    <string name="compose">Compose</string>
+    <string name="views">Views</string>
+    <string name="action_1">Tap count: %d</string>
+    <string name="action_2">Show Snacbar</string>
+    <string name="action_3">Share</string>
+</resources>

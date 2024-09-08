@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_switch"
+        android:icon="@drawable/ic_switch_to_compose"
+        android:title="@string/switch_activity"
+        app:iconTint="@color/md_theme_onSurfaceVariant"
+        app:showAsAction="always" />
+</menu>
