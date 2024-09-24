@@ -57,10 +57,6 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
-    implementation(projects.anylytics)
-    implementation(projects.anylyticsAdobe)
-    implementation(projects.anylyticsFirebase)
-
     implementation(libs.androidx.activity)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
@@ -69,6 +65,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.bundles.androidx.compose)
+    implementation(libs.bundles.anylytics.demo)
     implementation(libs.firebase.analytics)
     implementation(libs.hilt.android)
     implementation(libs.javax.inject)

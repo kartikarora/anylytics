@@ -1,14 +1,10 @@
 package me.kartikarora.anylytics.demo.views
 
-import android.app.UiModeManager
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.compose.ui.res.stringResource
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.button.MaterialButton
 import com.google.firebase.analytics.FirebaseAnalytics
 import dagger.hilt.android.AndroidEntryPoint
 import me.kartikarora.anylytics.demo.R
@@ -21,13 +17,13 @@ import me.kartikarora.anylytics.demo.common.KEY_TAP_COUNT
 import me.kartikarora.anylytics.demo.common.METHOD_INTENT
 import me.kartikarora.anylytics.demo.common.METHOD_SHARE_SHEET
 import me.kartikarora.anylytics.demo.common.METHOD_SNACKBAR
-import me.kartikarora.anylytics.models.Event
 import me.kartikarora.anylytics.demo.common.shareAnylyticsLibrary
 import me.kartikarora.anylytics.demo.common.showSnackbar
 import me.kartikarora.anylytics.demo.common.switchToCompose
 import me.kartikarora.anylytics.demo.databinding.ActivityDemoViewsBinding
 import me.kartikarora.anylytics.models.BreadCrumbs
 import me.kartikarora.anylytics.models.ContextData
+import me.kartikarora.anylytics.models.Event
 
 @AndroidEntryPoint
 class DemoViewsActivity : BaseActivity() {

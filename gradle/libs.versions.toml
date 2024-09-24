@@ -6,6 +6,7 @@ agp = "8.6.1"
 androidxComposeBom = "2024.09.02"
 androidxComposeFoundation = "1.7.2"
 androidxComposeMaterial3 = "1.3.0"
+anylytics = "0.0.1"
 appcompat = "1.7.0"
 constraintlayout = "2.1.4"
 coreKtx = "1.13.1"
@@ -39,6 +40,8 @@ androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecyc
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+anylytics = { group = "me.kartikarora.anylytics", name = "anylytics", version.ref = "anylytics" }
+anylytics-firebase = { group = "me.kartikarora.anylytics", name = "anylytics-firebase", version.ref = "anylytics" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid" }
@@ -70,4 +73,8 @@ androidx-compose = [
 androidx-compose-debug = [
     "androidx-ui-test-manifest",
     "androidx-ui-tooling"
+]
+anylytics-demo = [
+    "anylytics",
+    "anylytics-firebase"
 ]
