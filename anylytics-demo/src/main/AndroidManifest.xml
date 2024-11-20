@@ -11,11 +11,18 @@
         android:theme="@style/Theme.Anylytics">
         <activity
             android:name=".views.DemoViewsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:label="@string/title_activity_views_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".compose.DemoComposeActivity"
             android:exported="true"
-            android:label="@string/title_activity_demo"
+            android:label="@string/title_activity_compose_demo"
             android:theme="@style/Theme.Anylytics">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

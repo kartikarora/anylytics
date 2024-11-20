@@ -29,11 +29,10 @@ tasks.dokkaHtmlMultiModule.configure {
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         moduleName = "Anylytics"
         footerMessage = "&copy; 2025 Kartik Arora"
-        outputDirectory = layout.buildDirectory.dir("dokkaOutput/libraries/anylytics")
+        outputDirectory = layout.buildDirectory.dir("dokkaOutput/libraries/anylytics/")
     }
 
     pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
-        version = "0.0.1"
-        renderVersionsNavigationOnAllPages = true
+        version = "0.0.2-beta01"
     }
 }

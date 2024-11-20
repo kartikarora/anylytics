@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Anylytics</string>
-    <string name="title_activity_demo">DemoActivity</string>
+    <string name="title_activity_compose_demo">Compose</string>
+    <string name="title_activity_views_demo">Views</string>
     <string name="switch_activity">Switch Activity</string>
     <string name="anylytics_demo">Anylytics Demo</string>
     <string name="compose">Compose</string>

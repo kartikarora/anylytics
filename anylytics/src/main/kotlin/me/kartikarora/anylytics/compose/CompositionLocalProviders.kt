@@ -6,8 +6,8 @@ import me.kartikarora.anylytics.NoOpAnylyticsImpl
 
 /**
  * Global key used to obtain access to the Anylytics Interface
- * through a CompositionLocal.
+ * through a CompositionLocal. Using this composition, without providing an implementation will result in an error.
  */
 val LocalAnylyticsInterface = staticCompositionLocalOf<AnylyticsInterface> {
-    NoOpAnylyticsImpl()
+    error("LocalAnylyticsInterface not implemented")
 }

@@ -14,7 +14,7 @@ plugins {
 
 android {
     namespace = LibraryMetadata.anylyticsAdobeArtifactNamespace
-    compileSdk = BuildMetadata.compileSdk
+    compileSdkPreview = BuildMetadata.compileSdkPreview
 
     defaultConfig {
         minSdk = BuildMetadata.minSdk

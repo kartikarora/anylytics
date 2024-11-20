@@ -14,12 +14,12 @@ plugins {
 
 android {
     namespace = DemoAppMetadata.namespace
-    compileSdk = BuildMetadata.compileSdk
+    compileSdkPreview = BuildMetadata.compileSdkPreview
 
     defaultConfig {
         applicationId = DemoAppMetadata.namespace
         minSdk = BuildMetadata.minSdk
-        targetSdk = BuildMetadata.targetSdk
+        targetSdkPreview = BuildMetadata.targetSdkPreview
         versionCode = BuildMetadata.versionCode
         versionName = BuildMetadata.versionName
 
