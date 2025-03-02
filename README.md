@@ -1,3 +1,8 @@
+[![License](https://img.shields.io/github/license/kartikarora/anylytics)](https://github.com/kartikarora/anylytics/blob/develop/LICENSE)
+[![Workflow Status](https://img.shields.io/github/actions/workflow/status/kartikarora/anylytics/build.yml)](https://github.com/kartikarora/anylytics/actions/workflows/build.yml)
+[![API](https://img.shields.io/badge/API-29%2B-brightgreen.svg)](https://android-arsenal.com/api?level=29)
+[![Medium](https://img.shields.io/badge/Story-Medium-black?logo=medium&style=flat)](https://medium.com/proandroiddev/unifying-your-android-apps-analytics-a-provider-agnostic-approach-with-jetpack-compose-3d1d54f1f3a6)
+
 # Anylytics - Provider Agnostic Analytics Library for Android
 
 **Anylytics** is a flexible, provider-agnostic analytics library for Android applications. It allows you to easily switch between different analytics providers without locking into a specific one.
