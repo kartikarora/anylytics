@@ -25,4 +25,6 @@ email, or any other method with the owners of this repository before making a ch
 3. **Make your changes.**
 4. **Commit your changes with a descriptive message.**
 5. **Push your branch to your fork.**
-6. **Open a pull request.**
+6. **Open a pull request on develop.**
+
+This project follow [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)

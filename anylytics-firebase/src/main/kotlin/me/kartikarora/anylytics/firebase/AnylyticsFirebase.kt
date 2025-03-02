@@ -10,10 +10,27 @@ import me.kartikarora.anylytics.AnylyticsInterface
 import me.kartikarora.anylytics.models.Event
 import javax.inject.Inject
 
+/**
+ * Firebase implementation of the [AnylyticsInterface].
+ *
+ * This class handles sending analytics events to Firebase Analytics,
+ * including screen view tracking and user action tracking.
+ */
 class AnylyticsFirebase @Inject constructor() : AnylyticsInterface {
 
+    /**
+     * The Firebase Analytics instance used for event logging.
+     */
     private val analytics = Firebase.analytics
 
+    /**
+     * Converts an [Event] to a Firebase-compatible [Bundle] of parameters.
+     *
+     * This function processes the event's context data and breadcrumbs,
+     * converting them to appropriate parameter types for Firebase Analytics.
+     *
+     * @return A [Bundle] containing all parameters from the event's context
+     */
     private fun Event.toParams(): Bundle {
         contextData.setBreadcrumbs(breadCrumbs)
         return Bundle().apply {
@@ -35,6 +52,14 @@ class AnylyticsFirebase @Inject constructor() : AnylyticsInterface {
         }
     }
 
+    /**
+     * Tracks a screen view event in Firebase Analytics.
+     *
+     * This implementation logs a standard [FirebaseAnalytics.Event.SCREEN_VIEW] event
+     * with the screen name and any additional context parameters.
+     *
+     * @param view The [Event.View] object containing screen information and context
+     */
     override fun trackScreen(view: Event.View) {
         analytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW) {
             param(FirebaseAnalytics.Param.SCREEN_NAME, view.screenName)
@@ -42,6 +67,15 @@ class AnylyticsFirebase @Inject constructor() : AnylyticsInterface {
         }
     }
 
+    /**
+     * Tracks a user action event in Firebase Analytics.
+     *
+     * This implementation logs a custom event with the action name (converted to
+     * snake_case format as per Firebase recommendations) and any additional
+     * context parameters.
+     *
+     * @param action The [Event.Action] object containing action information and context
+     */
     override fun trackAction(action: Event.Action) {
         val actionName = action.actionName.replace(" ", "_").lowercase()
         analytics.logEvent(actionName, action.toParams())
