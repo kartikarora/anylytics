@@ -1,7 +1,7 @@
 [versions]
 activity = "1.10.1"
 activityCompose = "1.10.1"
-adobeAnalytics = "3.0.1"
+adobeAnalytics = "3.0.2"
 agp = "8.8.2"
 androidxComposeBom = "2025.02.00"
 androidxComposeFoundation = "1.7.8"
