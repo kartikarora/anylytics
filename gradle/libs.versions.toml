@@ -10,6 +10,7 @@ anylytics = "0.0.1"
 appcompat = "1.7.0"
 constraintlayout = "2.2.1"
 coreKtx = "1.15.0"
+dokka = "2.0.0"
 firebaseAnalytics = "22.3.0"
 googleGmsGoogleServices = "4.4.2"
 hiltAndroid = "2.55"
@@ -23,6 +24,7 @@ mavenPublish = "0.30.0"
 
 [libraries]
 adobe-analytics = { group = "com.adobe.marketing.mobile", name = "analytics", version.ref = "adobeAnalytics" }
+android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokka" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
@@ -42,6 +44,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 anylytics = { group = "me.kartikarora.anylytics", name = "anylytics", version.ref = "anylytics" }
 anylytics-firebase = { group = "me.kartikarora.anylytics", name = "anylytics-firebase", version.ref = "anylytics" }
+dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokka" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid" }
@@ -52,6 +55,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
