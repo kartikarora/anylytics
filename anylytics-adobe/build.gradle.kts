@@ -1,5 +1,8 @@
 import me.kartikarora.anylytics.BuildMetadata
 import me.kartikarora.anylytics.LibraryMetadata
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -57,5 +60,10 @@ dependencies {
     implementation(libs.adobe.analytics)
     implementation(libs.androidx.core.ktx)
     implementation(libs.javax.inject)
+}
 
+tasks.dokkaHtmlPartial.configure {
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        moduleName = "Anylytics for Adobe"
+    }
 }

@@ -1,5 +1,8 @@
 import me.kartikarora.anylytics.BuildMetadata
 import me.kartikarora.anylytics.LibraryMetadata
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -60,4 +63,10 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.javax.inject)
     implementation(libs.kotlinx.serialization.json)
+}
+
+tasks.dokkaHtmlPartial.configure {
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        moduleName = "Anylytics Library"
+    }
 }
