@@ -1,6 +1,8 @@
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.versioning.VersioningConfiguration
+import org.jetbrains.dokka.versioning.VersioningPlugin
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
@@ -17,16 +19,21 @@ plugins {
 
 buildscript {
     dependencies {
+        classpath(libs.dokka.android.documentation.plugin)
         classpath(libs.dokka.base)
+        classpath(libs.dokka.versioning.plugin)
     }
-}
-
-dependencies {
-    dokkaPlugin(libs.android.documentation.plugin)
 }
 
 tasks.dokkaHtmlMultiModule.configure {
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        moduleName = "Anylytics"
         footerMessage = "&copy; 2025 Kartik Arora"
+        outputDirectory = layout.buildDirectory.dir("dokkaOutput/libraries/anylytics")
+    }
+
+    pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
+        version = "0.0.1"
+        renderVersionsNavigationOnAllPages = true
     }
 }
