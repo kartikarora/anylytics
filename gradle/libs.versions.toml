@@ -1,4 +1,6 @@
 [versions]
+kotlinxCoroutinesCore = "1.8.0"
+ktor = "2.3.10"
 activity = "1.10.1"
 activityCompose = "1.10.1"
 adobeAnalytics = "3.0.2"
@@ -21,6 +23,7 @@ kspVersion = "2.1.10-1.0.31"
 lifecycleRuntimeKtx = "2.8.7"
 material = "1.12.0"
 mavenPublish = "0.31.0"
+jetbrainsCompose = "2.1.10"
 
 [libraries]
 adobe-analytics = { group = "com.adobe.marketing.mobile", name = "analytics", version.ref = "adobeAnalytics" }
@@ -41,6 +44,10 @@ androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecyc
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
 anylytics = { group = "me.kartikarora.anylytics", name = "anylytics", version.ref = "anylytics" }
 anylytics-firebase = { group = "me.kartikarora.anylytics", name = "anylytics-firebase", version.ref = "anylytics" }
 dokka-android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokka" }
@@ -64,6 +71,7 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrainsCompose" }
 
 [bundles]
 androidx-compose = [
