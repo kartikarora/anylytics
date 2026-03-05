@@ -1,0 +1,74 @@
+name: Build and Deploy Anylytics
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    name: "Validate Environment"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v4
+
+  build-libraries:
+    name: "Build Android Libraries"
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Setup Environment
+        uses: ./.github/actions/gradle-setup
+      
+      - name: Build All Libraries
+        run: ./gradlew assembleRelease
+
+  generate-docs:
+    name: "Generate Documentation"
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Setup Environment
+        uses: ./.github/actions/gradle-setup
+      
+      - name: Download Brand CSS
+        run: curl -s https://distribute.kartikarora.me/css/kartikarora.ee883bc4.css -o web/brand.css
+
+      - name: Generate Dokka
+        run: ./gradlew :dokkaHtmlMultiModule
+
+      - name: Upload Docs Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: dokka-docs
+          path: build/dokkaOutput/libraries/anylytics/
+
+  deploy:
+    name: "Publish to Cloudflare"
+    needs: generate-docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Download Docs Artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: dokka-docs
+          path: web/public/dokka
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy web/public --project-name=anylytics-page

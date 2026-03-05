@@ -30,6 +30,10 @@ tasks.dokkaHtmlMultiModule.configure {
         moduleName = "Anylytics"
         footerMessage = "&copy; 2025 Kartik Arora"
         outputDirectory = layout.buildDirectory.dir("dokkaOutput/libraries/anylytics")
+        customStyleSheets = listOf(
+            file("web/brand.css"),
+            file("web/dokka-overrides.css")
+        )
     }
 
     pluginConfiguration<VersioningPlugin, VersioningConfiguration> {

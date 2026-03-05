@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anylytics - Provider Agnostic Analytics for Android. Building exceptional Android experiences with Kotlin and Jetpack Compose.">
+    <meta name="author" content="Kartik Arora">
+    
+    <title>Anylytics | Provider Agnostic Analytics</title>
+
+    <!-- Centrally Compiled CSS (Brand Design System) -->
+    <link rel="stylesheet" href="https://distribute.kartikarora.me/css/kartikarora.ee883bc4.css">
+    
+    <!-- Main Site Styles (Layout Components) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Material Symbols & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e13d147196.js" crossorigin="anonymous" type="text/javascript"></script>
+
+    <!-- Blocking Theme Script -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'system';
+            if (theme !== 'system') {
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Anylytics</a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#quick-start" class="nav-link">Quick Start</a></li>
+                <li><a href="dokka/" class="nav-link">Documentation</a></li>
+                
+                <ul class="nav-social">
+                    <li>
+                        <a href="https://github.com/kartikarora/anylytics" target="_blank" rel="noopener noreferrer" aria-label="github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container-narrow">
+            <h1 class="hero-title">ANYLYTICS</h1>
+            <p class="hero-subtitle">Provider Agnostic Analytics for Android</p>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto 3rem;">A flexible, decoupled library to track events across multiple providers without vendor lock-in. Built for modern Android with Jetpack Compose support.</p>
+            <div class="section-actions">
+                <a href="#quick-start" class="btn btn-primary">Get Started</a>
+                <a href="dokka/" class="btn btn-outline">Read Docs</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Features</h2>
+                <p class="section-subtitle">Why Anylytics?</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
+                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">bolt</span>
+                                Provider Agnostic
+                            </h3>
+                        </div>
+                        <p class="project-tagline">Easily switch or combine multiple analytics providers like Firebase, Adobe, or your custom solution.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flexibility</span>
+                            <span class="tech-tag">Agnostic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
+                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">layers</span>
+                                Compose Ready
+                            </h3>
+                        </div>
+                        <p class="project-tagline">Native support for Jetpack Compose with dedicated composables and CompositionLocal providers.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Compose</span>
+                            <span class="tech-tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
+                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">query_stats</span>
+                                Type Safe
+                            </h3>
+                        </div>
+                        <p class="project-tagline">Structured event models for Views and Actions ensure consistency across your entire application.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Safety</span>
+                            <span class="tech-tag">Type-Safe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="quick-start">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quick Start</h2>
+                <p class="section-subtitle">Get up and running in minutes</p>
+            </div>
+
+            <div class="container-narrow quickstart-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Add Dependency</h3>
+                        <pre><code>implementation("me.kartikarora.anylytics:anylytics:0.0.1")</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Implement Interface</h3>
+                        <pre><code>class MyAnalytics : AnylyticsInterface {
+    override fun trackScreen(view: Event.View) { /* ... */ }
+    override fun trackAction(action: Event.Action) { /* ... */ }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Track Events</h3>
+                        <pre><code>TrackScreen("home_screen")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-social">
+                <li>
+                    <a href="https://github.com/kartikarora/anylytics" target="_blank" rel="noopener noreferrer" aria-label="github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/arorakartik" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@kartikarora" target="_blank" rel="noopener noreferrer" aria-label="medium">
+                        <i class="fa-brands fa-medium"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <p>Made with Kotlin & Love | Hosted on Cloudflare Pages</p>
+            <p class="text-muted" style="font-size: 0.875rem;">&copy; 2026 Kartik Arora</p>
+        </div>
+    </footer>
+
+    <!-- Centrally Compiled JS -->
+    <script src="https://distribute.kartikarora.me/js/kartikarora.57ea7c40.js" type="text/javascript"></script>
+
+    <script>
+        // Re-initialize navigation if needed
+        if (window.KartikArora && window.KartikArora.initNavigation) {
+            window.KartikArora.initNavigation();
+        }
+    </script>
+</body>
+</html>
