@@ -1,3 +1,8 @@
-name = "anylytics-page"
-pages_build_output_dir = "web"
+name = "anylytics"
 compatibility_date = "2026-03-10"
+
+[observability]
+enabled = true
+
+[assets]
+directory = "./web"
