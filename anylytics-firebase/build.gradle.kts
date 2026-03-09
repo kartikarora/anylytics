@@ -1,14 +1,8 @@
 import me.kartikarora.anylytics.BuildMetadata
 import me.kartikarora.anylytics.LibraryMetadata
-import org.jetbrains.dokka.base.DokkaBase
-import org.jetbrains.dokka.base.DokkaBaseConfiguration
-import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.dokka)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.maven.publish)
 }
 
@@ -36,9 +30,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = JvmTarget.JVM_11.target
-    }
     mavenPublishing {
         coordinates(
             LibraryMetadata.artifactGroup,
@@ -60,10 +51,4 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.firebase.analytics)
     implementation(libs.javax.inject)
-}
-
-tasks.dokkaHtmlPartial.configure {
-    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
-        moduleName = "Anylytics for Firebase"
-    }
 }

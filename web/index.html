@@ -10,10 +10,8 @@
     <title>Anylytics | Provider Agnostic Analytics</title>
 
     <!-- Centrally Compiled CSS (Brand Design System) -->
-    <link rel="stylesheet" href="https://distribute.kartikarora.me/css/kartikarora.ee883bc4.css">
-    
-    <!-- Main Site Styles (Layout Components) -->
-    <link rel="stylesheet" href="style.css">
+    <link href="https://distribute.kartikarora.me/css/kartikarora.f2bb6a74.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     
     <!-- Material Symbols & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,16 +20,6 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e13d147196.js" crossorigin="anonymous" type="text/javascript"></script>
-
-    <!-- Blocking Theme Script -->
-    <script>
-        (function() {
-            const theme = localStorage.getItem('theme') || 'system';
-            if (theme !== 'system') {
-                document.documentElement.setAttribute('data-theme', theme);
-            }
-        })();
-    </script>
 </head>
 <body>
     <nav class="nav">
@@ -45,7 +33,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#features" class="nav-link">Features</a></li>
                 <li><a href="#quick-start" class="nav-link">Quick Start</a></li>
-                <li><a href="dokka/" class="nav-link">Documentation</a></li>
+                <li><a href="docs.html" class="nav-link">Documentation</a></li>
                 
                 <ul class="nav-social">
                     <li>
@@ -60,12 +48,12 @@
 
     <header class="hero">
         <div class="container-narrow">
-            <h1 class="hero-title">ANYLYTICS</h1>
+            <h1 class="hero-title">Anylytics</h1>
             <p class="hero-subtitle">Provider Agnostic Analytics for Android</p>
-            <p class="text-muted" style="max-width: 600px; margin: 0 auto 3rem;">A flexible, decoupled library to track events across multiple providers without vendor lock-in. Built for modern Android with Jetpack Compose support.</p>
+            <p class="text-muted">A flexible, decoupled library to track events across multiple providers without vendor lock-in. Built for modern Android with Jetpack Compose support.</p>
             <div class="section-actions">
                 <a href="#quick-start" class="btn btn-primary">Get Started</a>
-                <a href="dokka/" class="btn btn-outline">Read Docs</a>
+                <a href="docs.html" class="btn btn-outline">Read Docs</a>
             </div>
         </div>
     </header>
@@ -81,8 +69,8 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
-                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">bolt</span>
+                            <h3 class="project-title">
+                                <span class="material-symbols-outlined">bolt</span>
                                 Provider Agnostic
                             </h3>
                         </div>
@@ -97,8 +85,8 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
-                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">layers</span>
+                            <h3 class="project-title">
+                                <span class="material-symbols-outlined">layers</span>
                                 Compose Ready
                             </h3>
                         </div>
@@ -113,8 +101,8 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3 class="project-title" style="display: flex; align-items: center; gap: var(--space-sm);">
-                                <span class="material-symbols-outlined" style="font-size: var(--icon-size-feature) !important; color: var(--accent);">query_stats</span>
+                            <h3 class="project-title">
+                                <span class="material-symbols-outlined">query_stats</span>
                                 Type Safe
                             </h3>
                         </div>
@@ -141,7 +129,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Add Dependency</h3>
-                        <pre><code>implementation("me.kartikarora.anylytics:anylytics:0.0.1")</code></pre>
+                        <pre><code class="language-kotlin">implementation("me.kartikarora.anylytics:anylytics:0.0.1")</code></pre>
                     </div>
                 </div>
 
@@ -149,7 +137,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Implement Interface</h3>
-                        <pre><code>class MyAnalytics : AnylyticsInterface {
+                        <pre><code class="language-kotlin">class MyAnalytics : AnylyticsInterface {
     override fun trackScreen(view: Event.View) { /* ... */ }
     override fun trackAction(action: Event.Action) { /* ... */ }
 }</code></pre>
@@ -160,7 +148,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Track Events</h3>
-                        <pre><code>TrackScreen("home_screen")</code></pre>
+                        <pre><code class="language-kotlin">TrackScreen("home_screen")</code></pre>
                     </div>
                 </div>
             </div>
@@ -188,18 +176,11 @@
             </ul>
 
             <p>Made with Kotlin & Love | Hosted on Cloudflare Pages</p>
-            <p class="text-muted" style="font-size: 0.875rem;">&copy; 2026 Kartik Arora</p>
+            <p class="text-muted">&copy; 2026 Kartik Arora</p>
         </div>
     </footer>
 
     <!-- Centrally Compiled JS -->
-    <script src="https://distribute.kartikarora.me/js/kartikarora.57ea7c40.js" type="text/javascript"></script>
-
-    <script>
-        // Re-initialize navigation if needed
-        if (window.KartikArora && window.KartikArora.initNavigation) {
-            window.KartikArora.initNavigation();
-        }
-    </script>
+    <script src="https://distribute.kartikarora.me/js/kartikarora.19f05535.js"></script>
 </body>
 </html>

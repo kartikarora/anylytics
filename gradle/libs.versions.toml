@@ -1,26 +1,25 @@
 [versions]
-activity = "1.10.1"
-activityCompose = "1.10.1"
+activity = "1.12.4"
+activityCompose = "1.12.4"
 adobeAnalytics = "3.0.2"
-agp = "8.9.0"
-androidxComposeBom = "2025.03.00"
-androidxComposeFoundation = "1.7.8"
-androidxComposeMaterial3 = "1.3.1"
+agp = "9.0.1"
+androidxComposeBom = "2026.02.01"
+androidxComposeFoundation = "1.10.4"
+androidxComposeMaterial3 = "1.4.0"
 anylytics = "0.0.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
 constraintlayout = "2.2.1"
-coreKtx = "1.15.0"
-dokka = "2.0.0"
-firebaseAnalytics = "22.3.0"
-googleGmsGoogleServices = "4.4.2"
-hiltAndroid = "2.55"
+coreKtx = "1.17.0"
+firebaseAnalytics = "23.0.0"
+googleGmsGoogleServices = "4.4.4"
+hiltAndroid = "2.59.2"
 javaxInject = "1"
-kotlin = "2.1.10"
-kotlinxSerializationJson = "1.8.0"
-kspVersion = "2.1.10-1.0.31"
-lifecycleRuntimeKtx = "2.8.7"
-material = "1.12.0"
-mavenPublish = "0.31.0"
+kotlin = "2.3.10"
+kotlinxSerializationJson = "1.10.0"
+kspVersion = "2.3.5"
+lifecycleRuntimeKtx = "2.10.0"
+material = "1.13.0"
+mavenPublish = "0.36.0"
 
 [libraries]
 adobe-analytics = { group = "com.adobe.marketing.mobile", name = "analytics", version.ref = "adobeAnalytics" }
@@ -42,10 +41,7 @@ androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 anylytics = { group = "me.kartikarora.anylytics", name = "anylytics", version.ref = "anylytics" }
-anylytics-firebase = { group = "me.kartikarora.anylytics", name = "anylytics-firebase", version.ref = "anylytics" }
-dokka-android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokka" }
-dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokka" }
-dokka-versioning-plugin = { module = "org.jetbrains.dokka:versioning-plugin", version.ref = "dokka" }
+anylytics-firebase = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid" }
@@ -56,10 +52,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
