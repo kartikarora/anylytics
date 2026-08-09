@@ -11,6 +11,10 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+kotlin {
+    jvmToolchain(25)
+}
+
 android {
     namespace = DemoAppMetadata.namespace
     compileSdk = BuildMetadata.compileSdk
@@ -36,8 +40,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.toVersion(25)
+        targetCompatibility = JavaVersion.toVersion(25)
     }
     buildFeatures {
         compose = true
@@ -61,7 +65,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.bundles.androidx.compose)
-    implementation(libs.bundles.anylytics.demo)
+    implementation(projects.anylytics)
+    implementation(projects.anylyticsFirebase)
     implementation(libs.firebase.analytics)
     implementation(libs.hilt.android)
     implementation(libs.javax.inject)

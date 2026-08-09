@@ -8,6 +8,10 @@ plugins {
     alias(libs.plugins.maven.publish)
 }
 
+kotlin {
+    jvmToolchain(25)
+}
+
 android {
     namespace = LibraryMetadata.anylyticsArtifactNamespace
     compileSdk = BuildMetadata.compileSdk
@@ -28,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.toVersion(25)
+        targetCompatibility = JavaVersion.toVersion(25)
     }
     buildFeatures {
         compose = true

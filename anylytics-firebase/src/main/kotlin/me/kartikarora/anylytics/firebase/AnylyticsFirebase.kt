@@ -1,11 +1,10 @@
 package me.kartikarora.anylytics.firebase
 
 import android.os.Bundle
+import com.google.firebase.Firebase
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ParametersBuilder
-import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.analytics
 import com.google.firebase.analytics.logEvent
-import com.google.firebase.ktx.Firebase
 import me.kartikarora.anylytics.AnylyticsInterface
 import me.kartikarora.anylytics.models.Event
 import javax.inject.Inject
