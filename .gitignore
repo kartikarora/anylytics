@@ -167,3 +167,4 @@ google-services.json
 .kotlin
 
 /web/public/dokka
+.agents
